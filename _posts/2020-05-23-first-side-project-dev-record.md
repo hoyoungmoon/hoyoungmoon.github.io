@@ -1,7 +1,7 @@
 ---
 title: "첫 사이드 프로젝트"
 date: 2020-05-23 22:31:28 -0400
-categories: side-project android
+categories: sideproject android
 ---
 ###Unordered 
 
