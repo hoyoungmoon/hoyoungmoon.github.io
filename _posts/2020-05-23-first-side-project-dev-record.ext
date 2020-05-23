@@ -4,12 +4,16 @@ date: 2020-05-23 22:31:28 -0400
 categories: side-project android
 ---
 Unordered 
+
 * Item 1 
 * Item 2 
     * Item 2a 
     * Item 2b 
 
+
 Ordered 
+
+
 1. Item 1 
 1. Item 2 
 1. Item 3 
