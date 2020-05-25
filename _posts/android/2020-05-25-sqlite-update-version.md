@@ -24,20 +24,20 @@ ALTER TABLE {tableName} ADD COLUMN {newColumn} {type};
 
 **변경 전** 테이블
 
-id | name | mealCost | trafficCost | totalVac | extraColumn... | ...
---- | --- | --- | --- | --- | --- | ---
-
+| id | name | mealCost | trafficCost | totalVac | extraColumn... | ... |
+| --- | --- | --- | --- | --- | --- | --- |
+ 
 **변경 후** 테이블
 
-id | name | mealCost | trafficCost | totalVac | **payDay** | **promotionDay**
---- | --- | --- | --- | --- | --- | --- 
+| id | name | mealCost | trafficCost | totalVac | **payDay** | **promotionDay** |
+| --- | --- | --- | --- | --- | --- | --- |
 
 다양한 user table에 대하여 실행을 하였을 때 정상적으로 업데이트가 되는 것을 확인하였다. 더 나은 방법이나
 오류가 확인되면 수정을 하여야겠다. 오류에 대해 말씀해주시면 감사하겠습니다 :)
 
 
 #### 전체 코드
-```
+```java
 public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         if (oldVersion < 2) {
             try {
