@@ -1,3 +1,8 @@
+---
+title: "[Android]  SQLite로 db table 업그레이드"
+date: 2020-05-25 22:31:28 -0400
+categories: android java SQLite
+---
 ## [Android]  SQLite로 db table 업그레이드
 
 ### 업그레이드 방법
@@ -26,11 +31,13 @@ ALTER TABLE {tableName} ADD COLUMN {newColumn} {type};
 
 | id | name | mealCost | trafficCost | totalVac | extraColumn... | ... |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| INTEGER | TEXT | INTEGER | INTEGER | INTEGER | TYPE... | ... |
  
 **변경 후** 테이블
 
-| id | name | mealCost | trafficCost | totalVac | **payDay** | **promotionDay** |
+| id | name | mealCost | trafficCost | totalVac | payDay | promotionDay |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| INTEGER | TEXT | INTEGER | INTEGER | INTEGER | INTEGER | INTEGER |
 
 다양한 user table에 대하여 실행을 하였을 때 정상적으로 업데이트가 되는 것을 확인하였다. 더 나은 방법이나
 오류가 확인되면 수정을 하여야겠다. 오류에 대해 말씀해주시면 감사하겠습니다 :)
@@ -59,11 +66,18 @@ public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 ```
 
 ### 추가적인 내용
-#### SQLite의 장단점 및 한계
+#### SQLite의 장단점
+##### 장점
+  - 어떤 os든 (android, ios포함) 쉽게 이용이 가능하다.
+##### 단점
+  - 데이터 형식은 비교적 소수이기 때문에 다양한 데이터 형식 지정이 필요한 앱에 적합하지 않다. 예를 들어 기본 datetime 형식이 없다. 따라서 애플리케이션에서 이러한 형식을 처리해야 한다. 애플리케이션이 아닌 데이터베이스에서 datetime 값을 위한 입력을 정규화하고 제약하고자 한다면 SQLite는 적합하지 않다.
+  - SQLite 인스턴스는 단일체이며 독립적이라 동기화 기능을 제공하지 않는다. 수평확장 설계를 하는 프로그램에 적합하지 않다.
 
-#### android에서 사용할 수 있는 데이터 저장 방법들
+
+#### Android에서 사용할 수 있는 데이터 저장 방법들
 1. SQLite
 2. SharedPreference
+간단한 정보들을 key-value형태로 저장할 때 주로 사용한다.
 3. File Storage
     - external storage
     - internal storage
