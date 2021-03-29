@@ -27,6 +27,21 @@ categories: network
 
 
 ## HTTP
+### HTTP 버전
+HTTP/1.1
+표준화되기 이전의 버전인 HTTP/0.9에서는 단순히 GET만 하여 HTML 파일을 전송하는 형태였다. HTTP/1.0에 되어서 http header 개념이 도입되었다.
+이에 따라 Content-Type이 header에 추가되면서 더 다양한 문서 형태 전송이 가능해졌고 상태코드로 브러우저가 요청에 대한 성공 여부를 알 수 있게 되었다.
+
+HTTP/1.1부터 첫번째 표준버전의 HTTP가 나왔다.
+
+- keep-aive
+HTTP는 TCP 기반으로 이루어져있다.TCP는 신뢰성 확보를 위해 연결을 하고, 끊을 때 handshake가 이루어진다. 반면에 HTTP는 비연결성 프로토콜이므로
+한번의 요청과 응답이 이루어지고 나면 연결을 끊게 된다. 이와 같이 연결을 맺고, 끊을 때 마다 handshake로 인한 오버헤드가 발생하기 쉽다.
+그래서 keep-alive 기능이 HTTP/1.1에서부터 추가되고 한번 맺은 연결을 지속하여 불필요한 handshake를 줄여 성능 개선을 할 수 있게 된다.
+
+- pipelining
+
+#### HTTP/2.0
 ### HTTP GET, POST의 차이
 ### HTTP의 문제점
 
