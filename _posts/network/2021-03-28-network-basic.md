@@ -44,7 +44,8 @@ HTTP는 TCP 기반으로 이루어져있다.TCP는 신뢰성 확보를 위해 �
 두번째 요청 전송이 가능하게 되는 방식이다. 하지만 두번째 요청이 아무리 짧아도 첫번째 요청에 대한 응답을 기다려야하게 된다. 이 문제는 HOL(Head Of Line) Blocking이라고 
 파이프라인의 큰 문제이다. 이를 해결하기 위해 브라우저에서 파이프라인을 사용하지 않고 6-8개 정도의 connection을 병렬로 배치하여 요청을 가져오는 방식으로 개선하였다.
 
-   
+<img src="https://user-images.githubusercontent.com/53747019/112817856-dca5bc80-90bd-11eb-9104-8ab47363f2a8.png" width="60%">
+
 #### HTTP/2.0
 ### HTTP GET, POST의 차이
 ### HTTP의 문제점
