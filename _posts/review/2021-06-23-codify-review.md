@@ -1,5 +1,5 @@
 ---
-title: "팀에브리웨어 코디파이 1기 "
+title: "팀에브리웨어 코디파이 1기 후기"
 ---
 
 # 팀에브리웨어 코디파이 1기 후기 👨‍💻
@@ -7,7 +7,7 @@ title: "팀에브리웨어 코디파이 1기 "
 현재 백엔드로 인턴을 시작하였다. 인턴 준비하는 과정에서 **코디파이(CODIFY)** 때 공부하고 프로젝트 진행했던 내용들이 도움이 많이 되었다.
 2020년초에 수강한 **[팀에브리웨어(TeamEverywhere)](https://www.team-everywhere.com/?gclid=CjwKCAjwqvyFBhB7EiwAER786emDjq-Zs7lgZ1YXzttncc2l3aofBwodWxapZtLZgPbdf1amU_fOeBoC5XoQAvD_BwE) 코디파이 1기** 수강 후기를 이제서야 올린다.
 
-## 수강 동기⛳️
+## 수강 동기  ⛳️
 프로그래밍에 관심은 있었지만 독학을 한지 얼마되지 않았고 비전공자인 나에게 맞는 학원을 찾고있었다.
 더군다나 2019년 당시에는 사회복무요원으로 복무중이었기 때문에 평일 풀타임으로 수강해야하는 학원은 다니기가 어려워서 더욱더 찾기 힘들었던 것 같다.
 > - 비전공자가 들어도 문제 없는가?
@@ -28,7 +28,7 @@ title: "팀에브리웨어 코디파이 1기 "
   
   지금은 수업하는 곳도 넓어지고 바로 옆에 강사님들 계셔서 질문드리기 더 편해진 것 같다!
   
-  <img src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20201124_138%2F1606199002713cfKKX_JPEG%2FFj3on0UJ82FNfySB6GjY-Esv.jpg" width="40%" height="30%" title="px(픽셀) 크기 설정" alt="RubberDuck"></img>
+  <img src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20201124_138%2F1606199002713cfKKX_JPEG%2FFj3on0UJ82FNfySB6GjY-Esv.jpg" width="40%" height="30%" >
 
 
 - **현업에 적용 가능한 기술**
