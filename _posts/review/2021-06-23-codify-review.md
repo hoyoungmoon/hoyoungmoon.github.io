@@ -1,8 +1,7 @@
 ---
-title: "팀에브리웨어 코디파이 1기 후기"
+title: "팀에브리웨어 코디파이 1기 후기 👨‍💻"
 ---
 
-# 팀에브리웨어 코디파이 1기 후기 👨‍💻
 
 현재 백엔드로 인턴을 시작하였다. 인턴 준비하는 과정에서 **코디파이(CODIFY)** 때 공부하고 프로젝트 진행했던 내용들이 도움이 많이 되었다.
 2020년초에 수강한 **[팀에브리웨어(TeamEverywhere)](https://www.team-everywhere.com/?gclid=CjwKCAjwqvyFBhB7EiwAER786emDjq-Zs7lgZ1YXzttncc2l3aofBwodWxapZtLZgPbdf1amU_fOeBoC5XoQAvD_BwE) 코디파이 1기** 수강 후기를 이제서야 올린다.
