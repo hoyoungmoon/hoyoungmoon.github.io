@@ -54,4 +54,4 @@ title: "팀에브리웨어 코디파이 1기 후기 👨‍💻"
 앞에서 말한 것처럼 자기가 **성장하고 싶은 사람들에게 추천**한다. 나는 실제로 현업에선 개발을 어떤식으로 하는지 너무 궁금했고 할 수 있는 실력을 기르고 싶어서 수강했다. 
  같은 생각을 하시는 분들이 계시면 지금 4기를 모집하고 있으니 꼭 수강하시길 추천드립니다!
  
-[CODIFY 4기 모집](https://cafe.naver.com/teameverywhere?iframe_url_utf8=%2FArticleRead.nhn%253Fclubid%3D29898069%2526menuid%3D3%2526boardtype%3DL%2526page%3D1%2526specialmenutype%3D%2526userDisplay%3D15%2526articleid%3D993)
+[**팀에브리웨어 CODIFY 4기 모집**](https://cafe.naver.com/teameverywhere?iframe_url_utf8=%2FArticleRead.nhn%253Fclubid%3D29898069%2526menuid%3D3%2526boardtype%3DL%2526page%3D1%2526specialmenutype%3D%2526userDisplay%3D15%2526articleid%3D993)
