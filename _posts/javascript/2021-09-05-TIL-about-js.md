@@ -4,6 +4,8 @@ date: 2021-09-05
 categories: javascript
 ---
 
+오늘 배운 JS에 관련한 기록
+
 ## TIL about JS
 
 - javascript에 관하여 배운 것 아무거나 기록해놓자
