@@ -33,7 +33,9 @@ anyString.split('').map((c, i)=>{...})
     }
   }
   ```
+  
   - 할당하지 않고 하는 방법
+  
   ```javascript
   const arr = originalArr.map((_, i)=>{
     return originalArr.map(v=>v[i]);
