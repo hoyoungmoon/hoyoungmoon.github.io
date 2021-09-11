@@ -67,3 +67,8 @@ categories: javascript
     Math.max(...numberArray)
     ```
 
+- Map 정렬하기
+
+  ```javascript
+  const sortedMap = new Map([...unsortedMap.entries()].sort());
+  ```
