@@ -68,7 +68,10 @@ categories: javascript
     ```
 
 - Map 정렬하기
-
+  Map 생성자에 스프레드 또는 Array.from을 이용하여 배열 형태로 변환하고 sort로 정렬 후 다시 Map을 생성한다.
   ```javascript
+  // sort by key
   const sortedMap = new Map([...unsortedMap.entries()].sort());
+  // sort by value
+  const sortedMap = new Map([...unsortedMap.entries()].sort((a, b)=> a[1] - b[1]));
   ```
