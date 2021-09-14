@@ -40,7 +40,7 @@ categories: javascript
     const arr = originalArr.map((_, i)=>{
       return originalArr.map(v=>v[i]);
     })
-
+    ```
   
 - 배열의 최댓값, 최솟값 구하기
   
