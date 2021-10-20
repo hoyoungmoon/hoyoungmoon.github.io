@@ -1,5 +1,5 @@
 ---
-title: "[공익인간2.0] 0. 프로젝트 기획"
+title: "[공익인간 2.0] 0. 프로젝트 기획"
 date: 2021-09-20
 categories: javascript react-native side-project
 ---
