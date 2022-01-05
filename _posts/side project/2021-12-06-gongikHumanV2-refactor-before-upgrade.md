@@ -44,17 +44,22 @@ categories: javascript react-native side-project
 
 ## 디자인 시스템
 
-### 컴포넌트 (TODO 레이아웃 비포 애프터 추가하기)
+### 컴포넌트
+
+<img width="342" alt="스크린샷 2022-01-05 오후 8 40 08" src="https://user-images.githubusercontent.com/53747019/148212510-ae6a370e-c09f-4081-ad6f-d904e32a3393.png">
+<img width="342" alt="스크린샷 2022-01-05 오후 8 44 13" src="https://user-images.githubusercontent.com/53747019/148212522-c801951b-4a18-4051-bfae-40e3e0652c0a.png">
 
 기존엔 공통 컴포넌트 없이 모든게 페이지마다 제각각 개별적으로 만들어서 진행하였다. Atomic Design Pattern을 나름대로 적용하여 진행하려고 노력하였다. 컴포넌트의 디자인은 토스 디자인을 많이 참고하였다.
 
 ### 다크모드
 
-<img width="200" alt="스크린샷 2022-01-05 오후 8 25 13" src="https://user-images.githubusercontent.com/53747019/148210509-7cea2082-7d48-4b49-a9c3-7af2287ff566.png">
-<img width="200" alt="스크린샷 2022-01-05 오후 8 25 24" src="https://user-images.githubusercontent.com/53747019/148210494-ac30f36e-780b-4137-8bd4-ea0938f76320.png">
+<img width="300" alt="스크린샷 2022-01-05 오후 8 25 13" src="https://user-images.githubusercontent.com/53747019/148210509-7cea2082-7d48-4b49-a9c3-7af2287ff566.png">
+<img width="300" alt="스크린샷 2022-01-05 오후 8 25 24" src="https://user-images.githubusercontent.com/53747019/148210494-ac30f36e-780b-4137-8bd4-ea0938f76320.png">
 <br/>
 <br/>
 
 사용자분들이 리뷰나 메일로 **다크모드** 지원을 부탁하였다. 디자인 시스템을 적용하면서 동시에 진행하면 좋을 것 같다고 생각하였다. [쏘카 컬러 시스템 구축 과정](https://tech.socarcorp.kr/design/2020/07/22/dark-mode-02.html)에 관련된 기술 블로그 글을 많이 참고하여 진행하였다.
 
 ## 상태 관리
+
+기존에는 props drilling을 이용하여 유저, 휴가정보 상태와 변경을 props를 통해 전달하였다.
