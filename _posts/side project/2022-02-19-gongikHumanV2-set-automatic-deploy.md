@@ -1,10 +1,10 @@
 ---
-title: "[공익인간 2.0] 3. 브랜치 전략 및 배포 자동화 구현"
+title: "[공익인간 2.0] 3. 배포 자동화 구현 및 브랜치 workflow 수정"
 date: 2022-02-19
 categories: javascript react-native side-project
 ---
 
-# **Github Actions**와 **Fastlane**으로 React Native 배포 자동화 구현하기
+# Github Actions와 Fastlane으로 배포 자동화 구현하기
 
 ## **배경**
 
@@ -20,15 +20,27 @@ categories: javascript react-native side-project
 
 ## **브랜치 전략**
 
-### release 브랜치 추가
+TODO: Feature Branch Workflow에서 Gitflow Workflow로 변경하는 것 설명
+
+### release 브랜치
 
 스토어 배포전 테스트를 위한 빌드를 진행할 때 develop에서 따로 release 브랜치로 checkout하는 방식을 추가하였다.
 
 1. 개발 완료된 feature 브랜치 develop 브랜치로 pull reqeust & merge
 2. develop 브랜치에서 "git branch checkout -b release/v${CURRENT_VERSION}"
-3. release 브랜치에서 iOS TestFlight, android 내부테스트 빌드
+3. release 브랜치에서 Fastlane을 통한 iOS TestFlight, android 내부테스트 빌드
 
-### hotfix 브랜치 추가
+```
+git push origin feature/{branch_name} & pull request into develop branch
+
+git push checkout develop
+git pull origin develop
+
+git branch checkout -b release/v{CURRENT_VERSION}
+fastlane build beta
+```
+
+### hotfix 브랜치
 
 release 브랜치와 마찬가지로 급하게 수정해야하는 사항을 위한 브랜치를 구분하였다.
 
@@ -43,7 +55,146 @@ release 브랜치에서 테스트 검토 완료 하였을 시,
 2. master 브랜치에서 해당 release 브랜치 pull
 3. 태그 생성 "git tag v{CURRENT_VERSION}"
 4. 원격 저장소 푸시 "git push origin v{CURRENT_VERSION}"
+5. Github Actions, Fastlane을 통한 스토어 배포
+
+```
+git push origin release/v{CURRENT_VERSION}
+
+git checkout master
+git pull origin release/v{CURRENT_VERSION}
+
+git tag v{CURRENT_VERSION}
+git push origin v{CURRENT_VERSION}
+
+<!-- github actions에서 진행 -->
+fastlane build prod
+```
 
 <br/>
 
 ## **배포 자동화**
+
+위에서 계획한 테스트 빌드와 스토어 배포 과정을 자동화하기 위해 github actions와 Fastlane을 사용하였다.
+
+> ### **Fastlane**
+>
+> - Ruby 기반 클라이언트 자동 빌드 오픈소스 라이브러리이다.
+> - iOS, android 배포 자동화를 위해 사용하였다.
+>
+> ### **Github Actions**
+>
+> - Github에서 제공하는 CI/CD 툴로 테스트, 빌드, 배포 등 개발 프로세스를 자동화할 수 있다.
+> - master branch에 tag와 함께 push 되었을 때 자동으로 fastlane을 실행하기 위해 사용하였다.
+
+### **Fastlane 설정**
+
+```ruby
+default_platform(:ios)
+
+platform :ios do
+  # TestFlight 배포 및 테스트
+  desc "Push a new beta build to TestFlight"
+  lane :beta do
+    increment_build_number(xcodeproj: "iosAgentApp.xcodeproj")
+    build_app(workspace: "iosAgentApp.xcworkspace", scheme: "iosAgentApp")
+    upload_to_testflight(skip_waiting_for_build_processing: true)
+  end
+
+  # 배포 전 빌드, 버전 increament
+  desc 'Version increament'
+  lane :version do |options|
+    updateVersion(options)
+    increment_build_number(xcodeproj: 'iosAgentApp.xcodeproj')
+  end
+
+  # github actions를 통한 스토어 배포
+  desc 'GitHub actions release'
+  lane :github do |_options|
+    create_keychain(
+    #   name: 'distribution_ios_keychain',
+    #   password: 'Alleyoops1402',
+      timeout: 1800,
+      default_keychain: true,
+      unlock: true,
+      lock_when_sleeps: false
+    )
+    import_certificate(
+    #   certificate_path: '../certifications/distribution_ios_keychain.p12',
+    #   certificate_password: 'Alleyoops1402',
+    #   keychain_name: 'distribution_ios_keychain',
+    #   keychain_password: 'Alleyoops1402'
+    )
+    install_provisioning_profile(path: '../certifications/distribution_ios.mobileprovision')
+    update_project_provisioning(
+      xcodeproj: 'iosAgentApp.xcodeproj',
+      target_filter: 'github',
+      profile: 'distribution_ios.mobileprovision',
+      build_configuration: 'Release'
+    )
+    api_key = app_store_connect_api_key(
+    #   key_id: 'QA9HNUZ732',
+    #   issuer_id: 'e0741a70-9331-49e8-98cc-29086c11df7a',
+    #   key_filepath: '../certifications/distribution_ios_api_key.p8'
+    )
+
+    build_app(workspace: 'iosAgentApp.xcworkspace', scheme: 'iosAgentApp')
+    upload_to_app_store(
+      force: true,
+      reject_if_possible: true,
+      skip_metadata: false,
+      skip_screenshots: true,
+      languages: ['ko'],
+      release_notes: {
+        'default' => 'bug fixed',
+        'ko' => 'bug fixed'
+      },
+      submit_for_review: true,
+      precheck_include_in_app_purchases: false,
+      automatic_release: true,
+      submission_information: {
+        add_id_info_uses_idfa: true,
+        add_id_info_serves_ads: true,
+        add_id_info_tracks_install: true,
+        add_id_info_tracks_action: false,
+        add_id_info_limits_tracking: true,
+        export_compliance_encryption_updated: false
+      },
+      api_key: api_key
+    )
+  end
+end
+```
+
+### **Github Actions 설정**
+
+프로젝트 레포지토리의 actions 탭에서 workflow를 생성하면 자동으로 프로젝트에 .github/workflows/build.yml 위치로 yml 파일이 추가된다.
+
+```javascript
+name: build
+on:
+  push:
+    tags:
+      - "v*"
+jobs:
+  release-ios:
+    name: Build and release iOS app
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: "10.x"
+      - uses: actions/setup-ruby@v1
+        with:
+          ruby-version: "2.x"
+      - name: Install Fastlane
+        run: cd ios && bundle install && cd ..
+      - name: Install packages
+        run: npm install
+      - name: Install pods
+        run: cd ios && pod install && cd ..
+      - name: Execute Fastlane command
+        run: cd ios && fastlane github
+  release-android:
+    ...
+```
