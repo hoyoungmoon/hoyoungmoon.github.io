@@ -8,7 +8,7 @@ categories: javascript react-native side-project
 
 ## **배경**
 
-공익인간 1.0 에서는 크게 **master, develop, feature 브랜치**를 구성하여 개발하였고 배포 또한 메뉴얼하게 진행하였다.
+공익인간 1.0 에서는 크게 `master`, `develop`, `feature` 브랜치를 구성하여 개발하였고 배포 또한 메뉴얼하게 진행하였다.
 
 공익인간 2.0 개발을 진행하면서 기존의 브랜치 플로우와 배포 방식에 아래와 같은 불편함이 발생하였다.
 
@@ -24,11 +24,11 @@ TODO: Feature Branch Workflow에서 Gitflow Workflow로 변경하는 것 설명
 
 ### release 브랜치
 
-스토어 배포전 테스트를 위한 빌드를 진행할 때 develop에서 따로 release 브랜치로 checkout하는 방식을 추가하였다.
+스토어 배포전 테스트를 위한 빌드를 진행할 때 `develop`에서 따로 `release` 브랜치로 checkout하는 방식을 추가하였다.
 
-1. 개발 완료된 feature 브랜치 develop 브랜치로 pull reqeust & merge
-2. develop 브랜치에서 "git branch checkout -b release/v${CURRENT_VERSION}"
-3. release 브랜치에서 Fastlane을 통한 iOS TestFlight, android 내부테스트 빌드
+1. 개발 완료된 `feature` 브랜치 `develop` 브랜치로 pull reqeust & merge
+2. `develop` 브랜치에서 "git branch checkout -b release/v${CURRENT_VERSION}"
+3. `release` 브랜치에서 Fastlane을 통한 iOS TestFlight, android 내부테스트 빌드
 
 ```
 git push origin feature/{branch_name} & pull request into develop branch
@@ -42,17 +42,17 @@ fastlane build beta
 
 ### hotfix 브랜치
 
-release 브랜치와 마찬가지로 급하게 수정해야하는 사항을 위한 브랜치를 구분하였다.
+`release` 브랜치와 마찬가지로 급하게 수정해야하는 사항을 위한 브랜치를 구분하였다.
 
-- release 브랜치에서 테스트 빌드를 통해 최종적인 테스트 도중 문제가 발생한 경우
+- `release` 브랜치에서 테스트 빌드를 통해 최종적인 테스트 도중 문제가 발생한 경우
 - 최악의 경우 스토어 배포가 완료된 후 문제가 발생한 경우
 
 ### master 브랜치에서 배포
 
-release 브랜치에서 테스트 검토 완료 하였을 시,
+`release` 브랜치에서 테스트 검토 완료 하였을 시,
 
-1. release 브랜치 push to remote repo
-2. master 브랜치에서 해당 release 브랜치 pull
+1. `release` 브랜치 push to remote repo
+2. `master` 브랜치에서 해당 release 브랜치 pull
 3. 태그 생성 "git tag v{CURRENT_VERSION}"
 4. 원격 저장소 푸시 "git push origin v{CURRENT_VERSION}"
 5. Github Actions, Fastlane을 통한 스토어 배포
