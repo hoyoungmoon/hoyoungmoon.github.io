@@ -1,10 +1,8 @@
 ---
-title: "[React Native] 위젯 구현하기 - iOS"
+title: "React Native에서 위젯 구현하기 (1) - iOS편"
 date: 2023-03-10
 categories: react-native
 ---
-
-# React Native에서 위젯 구현하기 (1) - iOS편
 
 위젯을 구현하기 위해 아래와 같이 크게 3단계로 작업하였다.
 
