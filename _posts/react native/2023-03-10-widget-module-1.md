@@ -56,6 +56,8 @@ Xcode에서 Widget Extension을 타겟으로 추가하게 되면 IntentTimelineP
 <!--
 ![ex_screenshot](../../assets/images/XcodeWidgetExtensionCapture.png) -->
 
+![Desktop View](/assets/images/XcodeWidgetExtensionCapture.png){: w="700" h="400" }
+
 해당 파일에서 위젯에 필요한 데이터를 정의하고 업데이트할 수 있는 로직을 구현할 수 있다. 기본적으로 원하는 위젯 데이터 구조를 구현하도록 SimpleEntry라는 struct가 정의되어 있다. 아래와 같이 startDate, endDate를 이용하여 오늘을 기준으로 dday, countDay를 구할 수 있도록 작성하였다.
 
 ```swift
