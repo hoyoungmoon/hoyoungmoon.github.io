@@ -44,3 +44,73 @@ set 메서드에 AppWidgetManager를 이용하여 위젯을 갱신하는 로직�
 ## 위젯 생성
 
 ## 데이터 업데이트 로직 구현
+
+AppWidgetManager를 상속받은 SimpleWidgetManager에는 onEnable, onDisabled, onReceive, onUpdate 메서드를 Override한다.
+
+```java
+public class SimpleWidgetManager extends AppWidgetProvider {
+
+    static void updateAppWidget(Context context, AppWidgetManager appWidgetManager,
+                                ComponentName componentName) {
+        try {
+            SharedPreferences sharedPref = context.getSharedPreferences("exampleKey", Context.MODE_PRIVATE);
+            String appString = sharedPref.getString("widget-data", "{\"startDate\":\"no-data\",\"endDate\":\"no-data\"}");
+            JSONObject widgetData = new JSONObject(appString);
+
+            RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.widget_default);
+
+            SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+            Date startDate = formatter.parse(widgetData.getString("startDate"));
+            Date endDate = formatter.parse(widgetData.getString("endDate"));
+            Date today = new Date();
+
+            int dayInMillis = 24 * 60 * 60 * 1000;
+            int ddays = (int) Math.floor((endDate.getTime() - today.getTime()) / dayInMillis) + 1;
+            int countDays = (int) Math.floor((double) (today.getTime() - startDate.getTime()) / (double) dayInMillis) + 1;
+
+            views.setTextViewText(R.id.start_date_text, widgetData.getString("startDate").replaceAll("-", ". "));
+            views.setTextViewText(R.id.end_date_text, widgetData.getString("endDate").replaceAll("-", ". "));
+            views.setTextViewText(R.id.d_day, "D" + (ddays > 0 ? "-" : "+") + Integer.toString(Math.abs(ddays)));
+            views.setTextViewText(R.id.count_day, "D" + (countDays > 0 ? "+" : "-") + Integer.toString(Math.abs(countDays)));
+
+            appWidgetManager.updateAppWidget(componentName, views);
+
+            // reschedule the widget refresh
+             AlarmHandler alarmHandler = new AlarmHandler(context);
+             alarmHandler.cancelAlarmManager();
+             alarmHandler.setAlarmManager();
+        } catch (JSONException | ParseException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
+        updateAppWidget(context, appWidgetManager, new ComponentName(context, SimpleWidgetManager.class));
+    }
+
+    @Override
+    public void onEnabled(Context context) {
+        // Enter relevant functionality for when the first widget is created
+        super.onEnabled(context);
+        AlarmHandler alarmHandler = new AlarmHandler(context);
+        alarmHandler.setAlarmManager();
+    }
+
+    @Override
+    public void onDisabled(Context context) {
+        super.onDisabled(context);
+        AlarmHandler alarmHandler = new AlarmHandler(context);
+        alarmHandler.cancelAlarmManager();
+    }
+
+    @Override
+    public void onReceive(Context context, Intent intent) {
+        super.onReceive(context, intent);
+        if (intent.getStringExtra(("mode")) != null && intent.getStringExtra(("mode")).equals("widget-update")) {
+            AppWidgetManager manager = AppWidgetManager.getInstance(context);
+            updateAppWidget(context, manager, new ComponentName(context, SimpleWidgetManager.class));
+        }
+    }
+}
+```
