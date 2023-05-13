@@ -4,8 +4,6 @@ date: 2023-05-10
 categories: react-native
 ---
 
-# React Native에서 위젯 구현하기 (2) - Android편
-
 [React Native에서 위젯 구현하기 (1) - iOS편](https://hoyoungmoon.github.io/react-native/widget-module-iOS/)에서 처럼
 
 1. 위젯 데이터를 공유할 수 있는 모듈 구현
@@ -16,7 +14,7 @@ categories: react-native
 
 React Native의 javascript와 iOS, android 플랫폼별 네이티브 코드 사이에 위젯 관련 데이터를 공유할 수 있는 모듈이 필요하다. android에는 [SharedPreferences](https://developer.android.com/training/data-storage/shared-preferences?hl=ko), iOS에는 [NSUserDefault](https://developer.apple.com/documentation/foundation/nsuserdefaults)를 이용하여 앱 내에서 데이터를 공유할 수 있다.
 
-Android의 경우 sharedPreference를 이용해 위젯 데이터를 저장할 수 있는 Native Module을 작성하였다. Native Module을 구현하는 방식은 [공식 문서](https://reactnative.dev/docs/native-modules-android)를 통해 확인할 수 있다.
+Android의 경우 SharedPreference를 이용해 위젯 데이터를 저장할 수 있는 Native Module을 작성하였다. iOS 위젯을 구현할 때 사용하였던 appGroupIdentifier와 동일한 키값(exampleKey)를 이용하여 SharedPreferences를 추가할 수 있는 editor를 생성 후 string 형태의 위젯 데이터를 추가 또는 수정할 수 있는 메서드를 추가하였다. Native Module을 구현하는 방식은 [공식 문서](https://reactnative.dev/docs/native-modules-android)를 통해 확인할 수 있다.
 
 ```java
 public class SharedStorage extends ReactContextBaseJavaModule {
@@ -45,7 +43,58 @@ set 메서드에 AppWidgetManager를 이용하여 위젯을 갱신하는 로직�
 
 ## 데이터 업데이트 로직 구현
 
-AppWidgetManager를 상속받은 SimpleWidgetManager에는 onEnable, onDisabled, onReceive, onUpdate 메서드를 Override한다.
+```java
+public class AlarmHandler {
+    private final Context context;
+
+    public AlarmHandler(Context context) {
+        this.context = context;
+    }
+
+    public void setAlarmManager() {
+        Intent intent = new Intent(context, GongikHumanWidget.class);
+        intent.putExtra("mode", "widget-update");
+        PendingIntent sender;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            sender = PendingIntent.getBroadcast(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
+        } else {
+            sender = PendingIntent.getBroadcast(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+        }
+
+        AlarmManager am = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
+        Calendar c = Calendar.getInstance();
+        c.add(Calendar.DATE, 1);
+        c.set(Calendar.HOUR_OF_DAY, 0);
+        c.set(Calendar.MINUTE, 1);
+        c.set(Calendar.SECOND, 0);
+        long l = c.getTimeInMillis();
+
+        if (am != null) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                am.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, l, sender);
+            } else {
+                am.setExact(AlarmManager.RTC_WAKEUP, l, sender);
+            }
+        }
+    }
+
+    public void cancelAlarmManager() {
+        Intent intent = new Intent(context, GongikHumanWidget.class);
+        intent.putExtra("mode", "widget-update");
+        PendingIntent sender;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            sender = PendingIntent.getBroadcast(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
+        } else {
+            sender = PendingIntent.getBroadcast(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+        }
+        AlarmManager am = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
+        if (am != null) {
+            am.cancel(sender);
+            sender.cancel();
+        }
+    }
+}
+```
 
 ```java
 public class SimpleWidgetManager extends AppWidgetProvider {
@@ -82,6 +131,19 @@ public class SimpleWidgetManager extends AppWidgetProvider {
         } catch (JSONException | ParseException e) {
             e.printStackTrace();
         }
+    }
+    ...
+}
+```
+
+AppWidgetManager를 상속받은 SimpleWidgetManager에서 Override된 onEnable, onDisabled, onReceive, onUpdate 메서드를 통해 업데이트 로직을 구현하였다.
+
+```java
+public class SimpleWidgetManager extends AppWidgetProvider {
+
+    static void updateAppWidget(Context context, AppWidgetManager appWidgetManager,
+                                ComponentName componentName) {
+       ...
     }
 
     @Override
