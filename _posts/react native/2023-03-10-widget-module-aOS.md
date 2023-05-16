@@ -43,6 +43,8 @@ set 메서드에 AppWidgetManager를 이용하여 위젯을 갱신하는 로직�
 
 ## 데이터 업데이트 로직 구현
 
+안드로이드의 [AlarmManager](https://developer.android.com/training/scheduling/alarms?hl=ko)를 통해 시스템 알람 서비스를 등록 후 특정 시간마다 Intent를 실행시켜 위젯을 업데이트할 수 있다. AlarmManager를 생성, 삭제할 수 있는 AlarmHandler 클래스를 먼저 작성하였다. 디데이 위젯을 특성상 정각에 한 번만 업데이트 되도록 AlarmManager를 등록하였다.
+
 ```java
 public class AlarmHandler {
     private final Context context;
@@ -52,7 +54,7 @@ public class AlarmHandler {
     }
 
     public void setAlarmManager() {
-        Intent intent = new Intent(context, GongikHumanWidget.class);
+        Intent intent = new Intent(context, SimpleWidgetManager.class);
         intent.putExtra("mode", "widget-update");
         PendingIntent sender;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
@@ -79,7 +81,7 @@ public class AlarmHandler {
     }
 
     public void cancelAlarmManager() {
-        Intent intent = new Intent(context, GongikHumanWidget.class);
+        Intent intent = new Intent(context, SimpleWidgetManager.class);
         intent.putExtra("mode", "widget-update");
         PendingIntent sender;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
@@ -96,12 +98,19 @@ public class AlarmHandler {
 }
 ```
 
+위젯을 추가하면서 생성된 AppWidgetProvider 클래스에 updateAppWidget 메서드를 추가하였다. AlarmHandler에서 구현한 AlarmManager에 의해 해당 클래스가 실행되었을 때 updateAppWidget 메서드에 의해 위젯의 값이 업데이트되도록할 예정이다. 크게 3가지 단계로 업데이트가 이루어진다.
+
+1. 위의 SharedStorage에 의해 SharedPreferences에 저장되어 있는 값을 가져오고 JSON 형태로 파싱
+2. 날짜 계산 후 위젯 뷰 업데이트
+3. 기존 AlarmManager를 취소 후 새로운 AlarmManager 설정
+
 ```java
 public class SimpleWidgetManager extends AppWidgetProvider {
 
     static void updateAppWidget(Context context, AppWidgetManager appWidgetManager,
                                 ComponentName componentName) {
         try {
+            // 위젯 데이터 파싱
             SharedPreferences sharedPref = context.getSharedPreferences("exampleKey", Context.MODE_PRIVATE);
             String appString = sharedPref.getString("widget-data", "{\"startDate\":\"no-data\",\"endDate\":\"no-data\"}");
             JSONObject widgetData = new JSONObject(appString);
@@ -113,6 +122,7 @@ public class SimpleWidgetManager extends AppWidgetProvider {
             Date endDate = formatter.parse(widgetData.getString("endDate"));
             Date today = new Date();
 
+            // 날짜 계산
             int dayInMillis = 24 * 60 * 60 * 1000;
             int ddays = (int) Math.floor((endDate.getTime() - today.getTime()) / dayInMillis) + 1;
             int countDays = (int) Math.floor((double) (today.getTime() - startDate.getTime()) / (double) dayInMillis) + 1;
@@ -123,8 +133,7 @@ public class SimpleWidgetManager extends AppWidgetProvider {
             views.setTextViewText(R.id.count_day, "D" + (countDays > 0 ? "+" : "-") + Integer.toString(Math.abs(countDays)));
 
             appWidgetManager.updateAppWidget(componentName, views);
-
-            // reschedule the widget refresh
+            // AlarmManager 재생성
              AlarmHandler alarmHandler = new AlarmHandler(context);
              alarmHandler.cancelAlarmManager();
              alarmHandler.setAlarmManager();
