@@ -145,7 +145,18 @@ public class SimpleWidgetManager extends AppWidgetProvider {
 }
 ```
 
-AppWidgetManager를 상속받은 SimpleWidgetManager에서 Override된 onEnable, onDisabled, onReceive, onUpdate 메서드를 통해 업데이트 로직을 구현하였다.
+위에서 정의한 updateAppWidget을 이용해서 상속받은 AppWidgetManager의 메서드에 업데이트 로직을 추가해줄 것이다. override가 필요한 메서드는 아래와 같다. 모두 특정 Action에 대한 Broadcast를 받은 후 실행된다.
+
+- `onEnabled`: AppWidgetProvider가 처음 생성되었을 호출
+- `onReceive`: BroadcastReceiver를 통해 Intent를 받고난 다음 로직을 실행하기 위해 호출
+- `onUpdate`: AppWidgetProvider 에 정의된 업데이트 주기에 맞추어 호출되거나, 앱 위젯이 처음 추가될 때 호출
+- `onDisabled`: AppWidgetProvider가 제거되었을 때 호출
+
+위젯을 업데이트하는 주기는 다음과 같다.
+
+1. 위젯 생성시 `onEnabled`에서 AlarmHandler를 초기화한다. `onUpdate`에서 updateAppWidget를 실행하여 위젯 데이터를 통해 뷰를 최초로 업데이트한다.
+2. AlarmHandler에서 시간에 시스템 알람이 실행되면 `onReceive`에서 위젯 업데이트 Intent인지 여부를 확인 후 updateAppWidget을 실행한다.
+3. 위젯 삭제시 `onDisabled`에서 설정되어 있던 AlarmHandler를 제거하는 로직을 실행한다.
 
 ```java
 public class SimpleWidgetManager extends AppWidgetProvider {
@@ -162,7 +173,6 @@ public class SimpleWidgetManager extends AppWidgetProvider {
 
     @Override
     public void onEnabled(Context context) {
-        // Enter relevant functionality for when the first widget is created
         super.onEnabled(context);
         AlarmHandler alarmHandler = new AlarmHandler(context);
         alarmHandler.setAlarmManager();
