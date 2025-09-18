@@ -3429,6 +3429,7 @@ spotxchange.com, 307720, RESELLER, 7842df1d2fe2db34
 spotxchange.com, 314755, RESELLER, 7842df1d2fe2db34
 spotxchange.com, 71451, RESELLER
 spotxchange.com, 82068, RESELLER, 7842df1d2fe2db34
+ssp.cadent.com, 2653, DIRECT, 1e1d41537f7cad7f
 ssp.e-volution.ai, AJxF6R111a9M6CaTvK, RESELLER
 ssp.e-volution.ai, AJxF6R118a9M6CaTvK, RESELLER
 ssp.e-volution.ai, AJxF6R119a9M6CaTvK, RESELLER
