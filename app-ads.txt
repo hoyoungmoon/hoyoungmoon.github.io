@@ -604,6 +604,7 @@ appnexus.com, 15426, RESELLER, f5ab79cb980f11d1
 appnexus.com, 15533, RESELLER, f5ab79cb980f11d1
 appnexus.com, 15629, RESELLER
 appnexus.com, 15629, RESELLER, f5ab79cb980f11d1
+appnexus.com, 15670, RESELLER
 appnexus.com, 15670, RESELLER, f5ab79cb980f11d1
 appnexus.com, 15686, DIRECT, f5ab79cb980f11d1
 appnexus.com, 15686, RESELLER, f5ab79cb980f11d1
@@ -796,6 +797,8 @@ bidence.com, 90863d4466f10fe4a352a7afbde0d54e, RESELLER
 bidence.com, b8932c93bf4123ee6d969796302a037c, RESELLER
 bidence.com, d35302328a4b1f129d376f9c2932b0b7, RESELLER
 bidinfluence.com, 502034, RESELLER
+bidmachine.io, 100, RESELLER
+bidmachine.io, 101, RESELLER
 bidmachine.io, 1064, RESELLER
 bidmachine.io, 1065, RESELLER
 bidmachine.io, 1118, DIRECT
@@ -847,6 +850,7 @@ blis.com, 86, RESELLER, 61453ae19a4b73f4
 blueseasx.com, 203592, RESELLER
 blueseasx.com, 204037, RESELLER, 7998eac5087f6110
 blueseasx.com, 232670, RESELLER, 7998eac5087f6110
+bluexad.ai, 1947919201712738304, RESELLER
 bold-win.com, 147, RESELLER
 bold-win.com, 148, RESELLER, 71746737d0bab951
 bold-win.com, 160, RESELLER, 71746737d0bab951
@@ -1191,6 +1195,7 @@ e-planning.net, ea9874674191f1ff, RESELLER, c1ba615865ed87b2
 e-planning.net, ec771b05828a67fa, RESELLER, c1ba615865ed87b2
 e-planning.net, ef8dc1dee54baf18, DIRECT, c1ba615865ed87b2
 e-planning.net, fe2609a0797012f6, RESELLER, c1ba615865ed87b2
+e-volution.ai, ajxf6r378a9m6catvk, RESELLER
 eliteAppgrade, 514554, RESELLER
 eliteappgrade.com, 171013, RESELLER
 eliteappgrade.com, 171013, RESELLER, b8ef6894818f9863
@@ -1362,6 +1367,7 @@ getmediamx.com, 1229559, RESELLER
 gitberry.com, 31mbg, RESELLER
 gitberry.com, 325100011, RESELLER
 gitberry.com, 325100012, RESELLER
+gitberry.com, 335100012, RESELLER
 gitberry.com, 345100012, RESELLER
 gitberry.com, 355100012, RESELLER
 gitberry.com, 375100011, RESELLER
@@ -1566,6 +1572,7 @@ improvedigital.com, 2551, RESELLER
 improvedigital.com, 2558, RESELLER
 improvedigital.com, 2602, RESELLER
 improvedigital.com, 2603, RESELLER
+improvedigital.com, 2607, RESELLER
 improvedigital.com, 2624, RESELLER
 inceptionmedia.ai, 642690015, RESELLER
 indexexchange.com, 179974, RESELLER
@@ -1929,6 +1936,7 @@ loopme.com, 14105, DIRECT, 6c8d5f95897a5a3b
 loopme.com, 14129, RESELLER, 6c8d5f95897a5a3b
 loopme.com, 14171, RESELLER, 6c8d5f95897a5a3b
 loopme.com, 15629, RESELLER, 6c8d5f95897a5a3b
+loopme.com, 15665, RESELLER, 6c8d5f95897a5a3b
 loopme.com, 2896, RESELLER, 6c8d5f95897a5a3b
 loopme.com, 5176, RESELLER, 6c8d5f95897a5a3b
 loopme.com, 5679, RESELLER, 6c8d5f95897a5a3b
@@ -2094,6 +2102,7 @@ mobilefuse.com, 3847, RESELLER, 71e88b065d69c021
 mobimight.com, 30271, RESELLER
 mobismarter.com, 3294, RESELLER
 mobupps.com, c74d97b01eae257e44aa9d5bade97baf32954, RESELLER
+mobupps.com, c74d97b01eae257e44aa9d5bade97baf33094, RESELLER
 mobupps.com, c74d97b01eae257e44aa9d5bade97baf5658, RESELLER
 mobupps.com, c74d97b01eae257e44aa9d5bade97baf7726, RESELLER
 monetixads.com, mix-pub-3646219662, RESELLER, uufps1dh5stc6euk
@@ -2217,6 +2226,7 @@ onlinemediasolutions.com, 20480, RESELLER, b3868b187e4b6402
 onlinemediasolutions.com, 20498, RESELLER
 onlinemediasolutions.com, 23120, RESELLER
 onlinemediasolutions.com, 29556, RESELLER
+onlinemediasolutions.com, 29556, RESELLER, b3868b187e4b6402
 onlinemediasolutions.com, 29559, RESELLER
 onomagic.com, 295591, RESELLER
 openx.com, 537100188, RESELLER, 6a698e2ec38604c6
@@ -2352,9 +2362,11 @@ orangeclickmedia.com, c-1034, RESELLER
 orangeclickmedia.com, c-1181, RESELLER
 orangeclickmedia.com, hgu2t0onqs874x95, RESELLER
 outbrain.com, 0005bfbc60db1570e63954937b4bec06de, RESELLER
+outbrain.com, 00092743fa380569f00f929c5c50dfccf8, RESELLER
 outbrain.com, 0023749a2264ea0429a71b54ac9ca0de9a, RESELLER
 outbrain.com, 002d7f7ba0bd74452f2b155d0dfb5cd6c8, RESELLER
 outbrain.com, 00595a29fe0f0efa37cd675959d6128c78, RESELLER
+outbrain.com, 0073fa86cff719c752763d2c3ee52c8f00, RESELLER
 outbrain.com, 0083474e9e7092cfca87a3deb5c92450b6, RESELLER
 outbrain.com, 009003959a5821f830a09d0bc562b43c62, RESELLER
 outbrain.com, 00a7a621155a60e5a12298c11790e00a60, RESELLER
@@ -2849,6 +2861,7 @@ risecodes.com, 6769332c8eb1b90001e9ed6f, RESELLER, 79929e88b2ba73bc
 risecodes.com, 67ac81ac2c875500018fbbfc, DIRECT
 risecodes.com, 67ac81ac2c875500018fbbfc, DIRECT, 79929e88b2ba73bc
 risecodes.com, 67e92bf7698942000140acce, RESELLER
+risecodes.com, 686ea3dfe2c0d50001e494e2, RESELLER
 risecodes.com, 686ea3dfe2c0d50001e494e2, RESELLER, 79929e88b2ba73bc
 rixengine.com, 36054, DIRECT
 rixengine.com, 36069, RESELLER
@@ -3713,6 +3726,7 @@ tpmn.io, 663, RESELLER
 tpmn.io, 664, RESELLER
 tradplusad.com, 97f87d32cbc437a3, RESELLER
 tradplusad.com, b3fca24bd11c1242, RESELLER
+tradplusad.com, ba761e9c72f279da, RESELLER
 tredio.io, 357a6fdf7642bf815a88822c447d9dc432901, RESELLER
 tredio.io, 357a6fdf7642bf815a88822c447d9dc433546, RESELLER
 tredio.io, 357a6fdf7642bf815a88822c447d9dc434414, RESELLER
@@ -4251,6 +4265,7 @@ yeahmobi.com, 5135322, RESELLER
 yeahmobi.com, 5135347, RESELLER
 yeahmobi.com, 5135535, RESELLER
 yellowhead.com, 45c0a1d7e329bf, RESELLER
+yellowhead.com, 67b9c0a1d2e345, RESELLER
 yieldlab.net, 11114007, RESELLER
 yieldlab.net, 14540899, RESELLER
 yieldlab.net, 15465081, RESELLER
