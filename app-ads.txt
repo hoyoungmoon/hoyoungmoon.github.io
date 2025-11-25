@@ -2119,6 +2119,7 @@ myfeature.tv, MehEp76Y1PNhVEXNGQ9r, RESELLER
 myfeature.tv, UvnXhUMZHRvKfRk52QZy, RESELLER
 myfeature.tv, WUK6VDvHBmA6l3PToPJK, RESELLER
 myfeature.tv, n1fnlxqufcvdx3gt6mjn, RESELLER
+nativo.com, 6072, RESELLER, 59521ca7cc5e9fee
 newsusadigital.com, 1001719521, RESELLER
 newsusadigital.com, 2333804076, RESELLER
 newsusadigital.com, 3136954787, RESELLER
@@ -3766,6 +3767,7 @@ triplelift.com, 12210-EB, RESELLER, 6c33edb13117fd86
 triplelift.com, 12240, RESELLER, 6c33edb13117fd86
 triplelift.com, 12353, RESELLER, 6c33edb13117fd86
 triplelift.com, 12456, RESELLER, 6c33edb13117fd86
+triplelift.com, 12465, RESELLER, 6c33edb13117fd86
 triplelift.com, 12552, RESELLER, 6c33edb13117fd86
 triplelift.com, 12569, RESELLER, 6c33edb13117fd86
 triplelift.com, 12613, RESELLER, 6c33edb13117fd86
