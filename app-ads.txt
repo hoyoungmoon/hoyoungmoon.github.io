@@ -2139,6 +2139,7 @@ odeeo.io, 199129844, RESELLER, 36cfd73091d5c3fc
 ogury.com, 2e617f73-52f7-4294-8258-cdee72e984ee, DIRECT
 ogury.com, 2e617f73-52f7-4294-8258-cdee72e984ee, RESELLER
 ogury.com, 4eb8caa3cd3038a07841f69cb2dde19e, DIRECT
+ogury.com, 534c7459-fba8-48b1-82d1-9a6c008551ea, RESELLER
 ogury.com, 83bbc3056ea427e2278e174f9460aeea, DIRECT
 ogury.com, e91052177a44df900ef9977b4b8314fe, RESELLER
 ogury.com, ede8d6ba-5a3f-4dfa-85aa-8cfb3c42f970, RESELLER
@@ -2849,6 +2850,7 @@ richaudience.com, FE7SmWPKQr, RESELLER
 richaudience.com, O2hIZpokwO, RESELLER
 richaudience.com, QjHuk6yVjA, RESELLER
 richaudience.com, flNoR9ht06, RESELLER
+risecodes.com, 5fad0eb54fdc5c00016859b1, DIRECT
 risecodes.com, 6022acddc8b2f90001767980, RESELLER
 risecodes.com, 63832beef8189a00015cb6d3, RESELLER
 risecodes.com, 6486c6155b231000010244b0, RESELLER
