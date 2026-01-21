@@ -1343,10 +1343,8 @@ freewheel.tv, sg1258340, RESELLER
 fromthetop.io, 65527, RESELLER
 fromthetop.io, 65529, RESELLER
 fromthetop.io, 65536, RESELLER
-fyber.com, 210639, DIRECT
 fyber.com, 210639, DIRECT, 1ad675c9de6b5176
 fyber.com, 219733, RESELLER
-fyber.com, 231693, DIRECT
 g-global.net, 20304, DIRECT
 galaxyx-tech.com, 60056, RESELLER
 gamaigroup.com, 320201, RESELLER
@@ -1427,6 +1425,7 @@ groundtruth.com, 107, RESELLER, 81cbf0a75a5e0e9a
 grouprvn.com, 520210621, RESELLER
 growintech.co, 101696, RESELLER
 growintech.co, 102275, RESELLER
+growintech.co, 102275, RESELLER, 9d8dfe5c6b00fb37
 growintech.co, 102275, RESELLER, xwrkgz
 growintech.co, 2723d092b63885e0d7c260cc007e8b9d2393g, RESELLER, 9d8dfe5c6b00fb37
 growintech.co, 2723d092b63885e0d7c260cc007e8b9d31577, RESELLER
@@ -3109,6 +3108,7 @@ sharethrough.com, 26VgE1nN, RESELLER, d53b998a7bd4ecd2
 sharethrough.com, 2749bad3, DIRECT
 sharethrough.com, 2749bad3, DIRECT, d53b998a7bd4ecd2
 sharethrough.com, 2f18331a, RESELLER, d53b998a7bd4ecd2
+sharethrough.com, 3232, RESELLER, d53b998a7bd4ecd2
 sharethrough.com, 3blZyYks, RESELLER, d53b998a7bd4ecd2
 sharethrough.com, 4456, RESELLER, d53b998a7bd4ecd2
 sharethrough.com, 4762, RESELLER, d53b998a7bd4ecd2
