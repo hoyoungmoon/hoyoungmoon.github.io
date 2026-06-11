@@ -538,6 +538,7 @@ appaspire.com, 97517, RESELLER
 appaspire.com, 97519, RESELLER
 appaspire.com, 97854, RESELLER
 appi-fy.ai, AFINTSM102, RESELLER
+applovin.com, bd9f3073e7d4177a949694be7ce054db, DIRECT
 applovin.com, fde22a61fe220fe5ae6437d433eac5f9, DIRECT
 appnerve.com, 187287, RESELLER
 appnerve.com, 328-b5607, RESELLER, 20e30b2ae1f670f2
@@ -1183,6 +1184,7 @@ criteo.com, SWH94X, RESELLER, 35d5010d7789b49d
 criteo.com, b-057955, RESELLER, 9fac4a4a87c2a44f
 criteo.com, b-062019, RESELLER, 9fac4a4a87c2a44f
 csjplatform.com, 45735, DIRECT
+daro.so, 59d3715f-bc54-4b8a-af11-a1ad8a514f5c, DIRECT
 dauup.com, 34101, RESELLER
 dauup.com, 34102, RESELLER
 dauup.com, 34103, RESELLER
