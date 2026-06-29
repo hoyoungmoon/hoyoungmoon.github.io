@@ -1438,6 +1438,7 @@ gitberry.com, 577, RESELLER
 gitberry.com, 90scb, RESELLER
 goldbach-germany.de, Connekt, RESELLER
 google.com, pub-1682595508078257, RESELLER, f08c47fec0942fa0
+google.com, pub-1867803350568245, DIRECT, f08c47fec0942fa0
 google.com, pub-2325473850364670, RESELLER, f08c47fec0942fa0
 google.com, pub-2754544012822361, DIRECT, f08c47fec0942fa0
 google.com, pub-2843405949989126, RESELLER, f08c47fec0942fa0
