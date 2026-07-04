@@ -2,6 +2,7 @@
 152media.info, 152M1050, RESELLER
 152media.info, 152M1093, RESELLER
 152media.info, 152M1133, RESELLER
+152media.info, 152M1215, RESELLER
 152media.info, 152M312, RESELLER
 152media.info, 152M337, RESELLER
 152media.info, 152M372, RESELLER
@@ -152,6 +153,7 @@ adagio.io, 1509, RESELLER
 adagio.io, 1514, RESELLER
 adagio.io, 1522, RESELLER
 adagio.io, 1525, RESELLER
+adagio.io, 1531, DIRECT
 adagio.io, 1546, RESELLER
 adagio.io, 1575, RESELLER
 adagio.io, 1661, RESELLER
@@ -1152,6 +1154,7 @@ conversantmedia.com, 100957, RESELLER, 03113cd04947736d
 conversantmedia.com, 100970, RESELLER, 03113cd04947736d
 conversantmedia.com, 100971, RESELLER, 03113cd04947736d
 conversantmedia.com, 100972, RESELLER, 03113cd04947736d
+conversantmedia.com, 101234, DIRECT, 03113cd04947736d
 conversantmedia.com, 34975, RESELLER, 03113cd04947736d
 conversantmedia.com, 39988, RESELLER
 conversantmedia.com, 40838, DIRECT, 03113cd04947736d
@@ -4182,6 +4185,7 @@ video.unrulymedia.com, 5336134699710583737, RESELLER
 video.unrulymedia.com, 533898005, RESELLER
 video.unrulymedia.com, 557688749, RESELLER
 video.unrulymedia.com, 564934834, RESELLER
+video.unrulymedia.com, 565904054, RESELLER
 video.unrulymedia.com, 579227028, RESELLER
 video.unrulymedia.com, 579227028, RESELLER, 98c21ef9a666c68b
 video.unrulymedia.com, 579828851, RESELLER
