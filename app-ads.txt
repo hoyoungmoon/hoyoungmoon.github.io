@@ -4072,6 +4072,7 @@ vidazoo.com, 66a936797145df0667ebe4e0, RESELLER, b6ada874b4d7d0b2
 vidazoo.com, 66e04f5e4d7fd89d878d29d2, RESELLER, b6ada874b4d7d0b2
 vidazoo.com, 6763f7632381fc1150a4f706, RESELLER
 vidazoo.com, 69c258b91fc35e6ff64e1b21, DIRECT, b6ada874b4d7d0b2
+vidazoo.com, 6a396affcd724c51155770f5, RESELLER, b6ada874b4d7d0b2
 vidcrunch.com, 5fb267bc6e2dd520fd551415, RESELLER
 video.unrulymedia.com, 1058378980, RESELLER
 video.unrulymedia.com, 1058378980, RESELLER, 6f752381ad5ec0e5
