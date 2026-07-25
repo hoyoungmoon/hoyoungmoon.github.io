@@ -1309,6 +1309,7 @@ eskimi.com, 2020000663, RESELLER
 eskimi.com, 2020000694, RESELLER
 eskimi.com, 2020000810, RESELLER
 eskimi.com, 2020000857, RESELLER
+eskimi.com, 2020001211, RESELLER
 eskimi.com, eas-2020000005, RESELLER
 exchange.loyal.app, AJxF6R86a9M6CaTvK, DIRECT
 facebook.com, 1777002975799994, DIRECT, c3e20eee3f780d68
@@ -1829,6 +1830,7 @@ ironsrc.com, 222871, RESELLER, 79929e88b2ba73bc
 jambojar.com, 2024J1334, DIRECT
 jcprog.com, pub-4518750432, RESELLER
 jio.com, 1547219295, RESELLER
+kargo.com, 9101, RESELLER, 98ccdd9948ed08da
 keenkale, 94044, RESELLER, 6c1c00b269ccdfa4
 keenkale.com, 170624, RESELLER
 keenkale.com, 43421, RESELLER
