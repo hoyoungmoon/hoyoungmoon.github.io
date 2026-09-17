@@ -691,6 +691,7 @@ appnexus.com, 16912, DIRECT, f5ab79cb980f11d1
 appnexus.com, 16912, RESELLER, f5ab79cb980f11d1
 appnexus.com, 16929, RESELLER, f5ab79cb980f11d1
 appnexus.com, 17044, RESELLER
+appnexus.com, 17044, RESELLER, f5ab79cb980f11d1
 appnexus.com, 17234, RESELLER
 appnexus.com, 17399, RESELLER, f5ab79cb980f11d1
 appnexus.com, 17417, RESELLER, f5ab79cb980f11d1
@@ -810,6 +811,7 @@ axonix.com, 59183, RESELLER
 axonix.com, 59183, RESELLER, bc385f2b4a87b721
 axonix.com, 59186, RESELLER
 axonix.com, 59202, RESELLER
+axonix.com, 59202, RESELLER, bc385f2b4a87b721
 axonix.com, 59204, RESELLER
 axonix.com, 59215, RESELLER
 azberry.com, 140032_1, DIRECT
@@ -894,6 +896,7 @@ bidmachine.io, 124, RESELLER
 bidmachine.io, 1269, RESELLER
 bidmachine.io, 1371, RESELLER
 bidmachine.io, 138, RESELLER
+bidmachine.io, 1406, RESELLER
 bidmachine.io, 1412, RESELLER
 bidmachine.io, 1424, RESELLER
 bidmachine.io, 147, RESELLER
@@ -1560,7 +1563,6 @@ google.com, pub-7734005103835923, RESELLER, f08c47fec0942fa0
 google.com, pub-7983651257838282, RESELLER, f08c47fec0942fa0
 google.com, pub-8005039264598613, DIRECT, f08c47fec0942fa0
 google.com, pub-8309773808661346, RESELLER, f08c47fec0942fa0
-google.com, pub-8542519591377166, DIRECT, f08c47fec0942fa0
 google.com, pub-8622186303703569, DIRECT, f08c47fec0942fa0
 google.com, pub-8757878616772490, DIRECT, f08c47fec0942fa0
 google.com, pub-9135355251665930, RESELLER
@@ -1746,6 +1748,7 @@ improvedigital.com, 2624, RESELLER
 improvedigital.com, 2625, RESELLER
 improvedigital.com, 2850, RESELLER
 improvedigital.com, 2919, RESELLER
+improvedigital.com, 2932, RESELLER
 inceptionmedia.ai, 64268289, DIRECT
 inceptionmedia.ai, 642690015, RESELLER
 indexexchange.com, 179974, RESELLER
@@ -2972,6 +2975,7 @@ pubmatic.com, 167664, DIRECT, 5d62403b186f2ace
 pubmatic.com, 168040, RESELLER, 5d62403b186f2ace
 pubmatic.com, 168105, RESELLER, 5d62403b186f2ace
 pubmatic.com, 168216, RESELLER, 5d62403b186f2ace
+pubmatic.com, 168292, RESELLER, 5d62403b186f2ace
 pubmatic.com, 168323, DIRECT, 5d62403b186f2ace
 pubmatic.com, 8676470, RESELLER
 pubmatic.com, 92509, RESELLER, 5d62403b186f2ace
@@ -3156,6 +3160,7 @@ risecodes.com, 686ea3dfe2c0d50001e494e2, RESELLER, 79929e88b2ba73bc
 risecodes.com, 68889ab9e3a193000189e78c, RESELLER, 79929e88b2ba73bc
 risecodes.com, 68d54e2fe125150001dd91e2, RESELLER
 risecodes.com, 6988441e2e63240001720bea, RESELLER
+risecodes.com, 69f733811f58ff0001446b76, RESELLER
 rixengine.com, 36054, DIRECT
 rixengine.com, 36069, RESELLER
 rixengine.com, 36084, DIRECT
@@ -3929,6 +3934,7 @@ targetspot.com, 480, RESELLER, feb28ed826dcf532
 taurusx.com, 70079, RESELLER
 taurusx.com, 70608, RESELLER
 taurusx.com, 70628, RESELLER
+taurusx.com, 70644, DIRECT
 taurusx.com, 80010, RESELLER
 taurusx.com, 80029, RESELLER
 taurusx.com, 80068, RESELLER
