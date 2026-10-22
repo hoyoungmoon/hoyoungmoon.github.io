@@ -526,6 +526,7 @@ anzu.io, 69539c978f0e5ae09b63f880, RESELLER
 anzu.io, 696508258f0e5ae09b6b4652, DIRECT, 1c1b7acf4992136c
 anzu.io, 69661fa0cfe6b82adfb712a3, RESELLER
 anzu.io, 6966391dcfe6b82adfb725ab, RESELLER, 1c1b7acf4992136c
+anzu.io, 6971f3a9795f3bd730fbe69d, RESELLER, 1c1b7acf4992136c
 anzu.io, 6995dd6e4b45334cc758cd8f, RESELLER
 anzu.io, 69a01331e82ac6eac1054bf7, RESELLER, 1c1b7acf4992136c
 anzu.io, 69cbfb8ded7491b170e82374, RESELLER
@@ -562,6 +563,7 @@ app-stock.com, 384491, RESELLER
 app-stock.com, 458952, RESELLER
 app-stock.com, 558223, RESELLER, ed8c126ea5971415
 app-stock.com, 690331, RESELLER, ed8c126ea5971415
+app-stock.com, 754634, RESELLER
 app-stock.com, 91654, RESELLER, ed8c126ea5971415
 app-stock.com, 982441, RESELLER
 app.tv, 3992, RESELLER
@@ -1406,6 +1408,7 @@ eskimi.com, 2020001167, RESELLER
 eskimi.com, 2020001193, RESELLER
 eskimi.com, 2020001208, RESELLER
 eskimi.com, 2020001211, RESELLER
+eskimi.com, 2020001285, RESELLER
 eskimi.com, eas-2020000005, RESELLER
 exchange.loyal.app, AJxF6R86a9M6CaTvK, DIRECT
 eyeconicspot.com, 4531, RESELLER
@@ -2768,6 +2771,7 @@ programmaticx.ai, 6845438, RESELLER
 programmaticx.ai, 6845438, RESELLER, b42d42eb28400efa
 programmaticx.ai, 688233, RESELLER, b42d42eb28400efa
 programmaticx.ai, 6888889, RESELLER
+programmaticx.ai, 697561, RESELLER, b42d42eb28400efa
 programmaticx.ai, 84448, RESELLER, b42d42eb28400efa
 pubeasy.io, 110013, RESELLER
 pubeasy.io, 110038, RESELLER
@@ -3071,6 +3075,7 @@ pubmatic.com, 168362, RESELLER, 5d62403b186f2ace
 pubmatic.com, 168363, RESELLER, 5d62403b186f2ace
 pubmatic.com, 168366, RESELLER, 5d62403b186f2ace
 pubmatic.com, 168367, RESELLER, 5d62403b186f2ace
+pubmatic.com, 168439, RESELLER, 5d62403b186f2ace
 pubmatic.com, 168480, DIRECT, 5d62403b186f2ace
 pubmatic.com, 92509, RESELLER, 5d62403b186f2ace
 pubmatic.com, 95054, RESELLER, 5d62403b186f2ace
@@ -4961,4 +4966,5 @@ zmaticoo.com, 5135535, RESELLER
 zmaticoo.com, 5135655, RESELLER
 zmaticoo.com, 5135703, RESELLER
 zmaticoo.com, 5135704, RESELLER
+zmaticoo.com, 5135992, RESELLER
 zoomd.com, 88478941, RESELLER
