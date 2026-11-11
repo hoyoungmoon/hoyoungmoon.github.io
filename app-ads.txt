@@ -2248,7 +2248,6 @@ lunamedia.io, d8b17846-4948-40e5-ac64-213a541dbddf, RESELLER, 524ecb396915caaf
 lunamedia.io, e6052bf0717e11eda1b0b561fab79f1a, RESELLER, 524ecb396915caaf
 lunamedia.io, fa0c2eaa5fae45b888d23460e1cac6e7, RESELLER, 524ecb396915caaf
 madopi.media, 63515, RESELLER
-managerdomain=bidmachine.io
 mangomob.net, 4rn0wgoxni, DIRECT
 mangomob.net, 5000671912, RESELLER
 mangomob.net, 5000672020, RESELLER
@@ -3535,6 +3534,7 @@ rubiconproject.com, 28169, RESELLER, 0bfd66d529a55807
 rubiconproject.com, 28299, RESELLER, 0bfd66d529a55807
 rubiconproject.com, 28433, RESELLER, 0bfd66d529a55807
 rubiconproject.com, 28767, RESELLER, 0bfd66d529a55807
+rubiconproject.com, 28887, RESELLER, 0bfd66d529a55807
 rubiconproject.com, 9753, RESELLER, 0bfd66d529a55807
 rubiconproject.com, 9755, RESELLER, 0bfd66d529a55807
 sabio.us, 100032, RESELLER, 96ed93aaa9795702
