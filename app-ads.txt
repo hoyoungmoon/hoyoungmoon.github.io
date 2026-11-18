@@ -6018,6 +6018,7 @@ trustedstack.com, TSEDHK072, RESELLER
 trustedstack.com, TSF422CZY, RESELLER
 trustedstack.com, TSL72ADG4, RESELLER
 trustedstack.com, TSLAU41Q2, RESELLER
+trustedstack.com, TSOZ5BM3O, RESELLER
 trustedstack.com, TSRD84SGD, RESELLER
 trustedstack.com, TSTKQ5827, RESELLER
 trustedstack.com, TSV0HMSUU, RESELLER
